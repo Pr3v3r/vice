@@ -1,8 +1,13 @@
-import express, { Router } from 'express';
-import { healthCheck } from "../controllers/healthController.js";
+import express from "express";
+import { protect } from "../middleware/authMiddleware.js";
 
 const router = express.Router();
 
-router.get('/health', healthCheck); 
+router.get("/protected", protect, (req, res) => {
+  res.json({
+    message: "You are authorized",
+    user: req.user,
+  });
+});
 
 export default router;
