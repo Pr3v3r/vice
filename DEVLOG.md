@@ -53,3 +53,7 @@ Added JWT logic, added login controller and tested on postman.
 
 Implemented JWT auth middleware.
 Learned how tokens are verified and how protected routes work using req.user.
+
+## Day 11:
+
+Decided and added Missions model schema. 
